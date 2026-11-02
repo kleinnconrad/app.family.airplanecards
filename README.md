@@ -1,18 +1,24 @@
-# Trumpfen Card Games (Flugzeuge & Giftige Tiere)
+# Trumpfen Card Games
 
-A highly tactical web-based "Hot-Seat" multiplayer implementation of the classic top trumps card game. Play with friends locally on a single screen! Featuring two spectacular AI-generated decks: **Flugzeug Trumpfen** (32 aircraft) and **Giftige Tiere** (32 poisonous animals). Built with React, Vite, and Tailwind CSS.
+A highly tactical web-based "Hot-Seat" multiplayer implementation of the classic top trumps card game. Play with friends locally on a single screen! Featuring four AI-generated decks: **Flugzeug Trumpfen** (32 aircraft), **Giftige Tiere** (32 poisonous animals), **RC Cars (Premium)** (32 RC cars) and **Fernseher** (32 televisions). Built with React, Vite, and Tailwind CSS.
 
 All card pictures are real photographs. Sources, authors and licenses are listed in [IMAGE_CREDITS.md](IMAGE_CREDITS.md).
 
 ## The Games
 
-Before starting, the lobby allows you to pick between two distinct decks:
+Before starting, the lobby allows you to pick between four decks:
 
 ### 1. Flugzeug Trumpfen (Airplanes)
 Take control of 32 of the most iconic aircraft in aviation history — from historical pioneers like the Wright Flyer to modern giants like the Airbus A380 and supersonic legends like the SR-71 Blackbird.
 
 ### 2. Giftige Tiere (Poisonous Animals)
 Dive into the deadly world of nature's most venomous and poisonous creatures. Play with 32 terrifying animals across categories like Snakes, Spiders, Marine Animals, and Amphibians.
+
+### 3. RC Cars (Premium)
+32 ready-to-run models and racing kits in four categories: Speedrun & On-Road, Basher & Monster Trucks, Buggies & Racing, and Scale & Off-Road.
+
+### 4. Fernseher (Televisions)
+32 televisions in four categories, from budget LED sets to MicroLED and other high-end models: OLED & QD-OLED, Mini-LED & QLED, LED & Budget, and Exoten & High-End.
 
 ## Game rules
 
@@ -21,7 +27,7 @@ Dive into the deadly world of nature's most venomous and poisonous creatures. Pl
 2. **Turn selection:** The active player looks at their top card and selects a statistic they believe will beat the opponents' top cards.
 3. **Winning the trick:** The player with the better value wins all played cards and places them at the bottom of their deck. The winner becomes the active player for the next round.
    - *Note on Values:* For most statistics, **Higher is Better**. 
-   - *Exceptions:* In the Airplanes deck, an older **First Flight Year** wins! In the Poisonous Animals deck, a lower **Toxicity (LD50 in mg/kg)** wins (because less venom is needed to be lethal)!
+   - *Exceptions:* In the Airplanes deck, an older **First Flight Year** wins! In the Poisonous Animals deck, a lower **Toxicity (LD50 in mg/kg)** wins (because less venom is needed to be lethal)! In the Fernseher deck, a lower **Dicke** (thickness) and a lower **Stromverbrauch** (power consumption) win.
 
 ### Tie-Breaker (Stechen)
 If both players have the exact same value for a chosen statistic:
@@ -49,10 +55,7 @@ Since the game is completely local and runs entirely in your browser, setup is e
 Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 ### Installation & Running
-1. Open your terminal and navigate to the `frontend` folder of the project:
-   ```bash
-   cd frontend
-   ```
+1. Open your terminal in the root folder of the repository (the folder that contains `package.json`).
 2. Install the necessary dependencies:
    ```bash
    npm install
@@ -61,6 +64,6 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
    ```bash
    npm run dev
    ```
-4. Open your browser and navigate to the provided local URL (usually `http://localhost:3000`).
+4. Open your browser and navigate to the local URL printed by Vite (`http://localhost:3000/app.family.airplanecards/`, because the app is built for GitHub Pages under that path).
 
 Grab a friend, enter your names in the lobby, and let the best pilot win!
